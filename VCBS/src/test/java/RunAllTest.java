@@ -6,9 +6,6 @@ import org.apache.poi.openxml4j.exceptions.InvalidFormatException;
 import org.testng.annotations.DataProvider;
 import org.testng.annotations.Test;
 
-import java.util.Arrays;
-import java.util.stream.Stream;
-
 public class RunAllTest extends BaseTest {
 
     @DataProvider
@@ -22,12 +19,11 @@ public class RunAllTest extends BaseTest {
 
 
     @Test(dataProvider = "getData")
-    public void BuyAction (String user, String pass, String symbol, String price, String qtty, String qttymu, String orderPass, String order) throws InterruptedException {
+    public void BuyAction (String user, String pass, String symbol,String orderType, String price, String qtty, String qttymu, String orderPass) throws InterruptedException {
         LoginAction login = new LoginAction(driver);
-        System.out.printf(user,pass, symbol);
         login.Login(user,pass);
         OrderAction orderAction = new OrderAction(driver);
-        orderAction.BuyOrder(symbol,price,qtty,qttymu,orderPass,order);
+        orderAction.BuyOrder(symbol,orderType,price,qtty,qttymu,orderPass);
 
     }
     @Test(dataProvider = "getData")

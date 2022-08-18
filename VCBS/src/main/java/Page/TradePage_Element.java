@@ -13,7 +13,8 @@ public class TradePage_Element extends BaseTest {
     public By order = By.xpath("//div[@id='PriceType_div']//select[@id='PriceType']");
     public By lo = By.xpath("//div[@id='PriceType_div']//select[@id='PriceType']//option[@value='LO']");
     public By ato = By.xpath("//div[@id='PriceType_div']//select[@id='PriceType']//option[@value='ATO']");
-    public By price = By.xpath("//div[@id='HomeContent']//td[contains(text(), 'Giá')]//following-sibling::td//input[@id='Price']");
+    public By atc = By.xpath("//div[@id='PriceType_div']//select[@id='PriceType']//option[@value='ATC']");
+    public By price  = By.xpath("//div[@id='HomeContent']//td[contains(text(), 'Giá')]//following-sibling::td//input[@id='Price']");
     public By qtty= By.xpath("//div[@id='HomeContent']//tr//following-sibling::tr//input[@id='Qtty']");
     public By qtymulti = By.xpath("//div[contains(text(), 'Nhân lệnh')]/..//following-sibling::td//input[@id='pv_qtymulti']");
     public By buyBtn = By.xpath("//input[@id='btn_NormalOrder' and @value='Mua']");
@@ -21,6 +22,7 @@ public class TradePage_Element extends BaseTest {
     public By confirmOrder =By.id("preview_advance_order_button_submit");
     public By okBtn =By.xpath("//button[@class='buttonOK']");
     public By messTrans =By.id("messageErrorDiv");
+    public By referPrice =By.xpath("//tr//td[@class='w33center no_change_arial_13']");
 
 
     //Element for Selling
